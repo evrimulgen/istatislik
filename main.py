@@ -1,5 +1,4 @@
 import urllib
-
 class youtube(object):
     def __init__(self, channel):
         self.info = {}
@@ -8,7 +7,6 @@ class youtube(object):
         self.search = '<h3 class="yt-lockup-title ">'
         socket = urllib.urlopen(self.videos)
         self.source = socket.readlines()
-    
     def getstr(self, source, tag):
         tagstart = source.find(tag)
         start = source.find('"', tagstart) + 1
